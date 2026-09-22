@@ -389,6 +389,31 @@ footer {
         opacity: 1;
     }
 }
+    /* Falling Sunflowers 🌻 */
+.sunflower {
+    position: fixed;
+    top: -60px;
+    font-size: 28px;
+    pointer-events: none;
+    z-index: 20;
+    animation: sunflowerFall linear forwards;
+}
+
+@keyframes sunflowerFall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
 </style>
 </head>
 <body>
@@ -471,8 +496,8 @@ footer {
             <span>🌙</span>
             <h3>Our Late Nights</h3>
             <p>
-                The nights when we talk about everything
-                and nothing, and somehow I never want
+                The nights when we talked about everything
+                and nothing, and somehow I never wanted
                 the conversation to end.
             </p>
         </div>
@@ -652,6 +677,27 @@ footer {
 </footer>
 <script>
 /* Floating hearts */
+    /* Falling Sunflowers 🌻 */
+function createSunflower() {
+    const sunflower = document.createElement("div");
+    sunflower.className = "sunflower";
+    sunflower.innerHTML = "🌻";
+
+    sunflower.style.left = Math.random() * 100 + "vw";
+    sunflower.style.fontSize =
+        (20 + Math.random() * 18) + "px";
+
+    sunflower.style.animationDuration =
+        (6 + Math.random() * 6) + "s";
+
+    document.body.appendChild(sunflower);
+
+    setTimeout(() => {
+        sunflower.remove();
+    }, 12000);
+}
+
+setInterval(createSunflower, 1200);
 function createHeart() {
     const heart = document.createElement("div");
     heart.className = "heart";
