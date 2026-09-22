@@ -267,6 +267,128 @@ footer {
         font-size: 18px;
     }
 }
+    /* 🎂 Birthday Cake */
+
+.cake {
+    position: relative;
+    width: 300px;
+    height: 230px;
+    margin: 50px auto 20px;
+}
+
+/* Plate */
+.cake-plate {
+    position: absolute;
+    bottom: 5px;
+    left: 15px;
+    width: 270px;
+    height: 22px;
+    background: #d9d9d9;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+}
+
+/* Cake */
+.cake-body {
+    position: absolute;
+    bottom: 25px;
+    left: 35px;
+    width: 230px;
+    height: 110px;
+    background: linear-gradient(#ffb6d9, #ff7fba);
+    border-radius: 15px 15px 25px 25px;
+    box-shadow: inset 0 -10px 0 rgba(255,255,255,.15),
+                0 10px 25px rgba(0,0,0,.4);
+}
+
+/* Cake top */
+.cake-top {
+    position: absolute;
+    bottom: 115px;
+    left: 35px;
+    width: 230px;
+    height: 45px;
+    background: #fff0f7;
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 22px;
+}
+
+/* Cream decorations */
+.cake-cream {
+    position: absolute;
+    top: -2px;
+    width: 30px;
+    height: 30px;
+    background: white;
+    border-radius: 50%;
+}
+
+.cake-cream:nth-child(1) {
+    left: 30px;
+}
+
+.cake-cream:nth-child(2) {
+    left: 100px;
+}
+
+.cake-cream:nth-child(3) {
+    right: 30px;
+}
+
+/* Candles */
+.candles {
+    position: absolute;
+    bottom: 145px;
+    left: 55px;
+    width: 190px;
+    display: flex;
+    justify-content: space-around;
+    z-index: 5;
+}
+
+.candle {
+    width: 14px;
+    height: 55px;
+    background: repeating-linear-gradient(
+        45deg,
+        #fff,
+        #fff 6px,
+        #ff69b4 6px,
+        #ff69b4 10px
+    );
+    border-radius: 4px;
+    position: relative;
+}
+
+/* Flame */
+.flame {
+    position: absolute;
+    width: 18px;
+    height: 27px;
+    background: #ffd166;
+    border-radius: 50% 50% 50% 50%;
+    top: -25px;
+    left: -2px;
+    box-shadow:
+        0 0 10px #ffd166,
+        0 0 25px #ff9d00;
+    animation: flicker .7s infinite alternate;
+}
+
+@keyframes flicker {
+    from {
+        transform: scale(1) rotate(-3deg);
+        opacity: .9;
+    }
+
+    to {
+        transform: scale(1.15) rotate(3deg);
+        opacity: 1;
+    }
+}
 </style>
 </head>
 <body>
@@ -422,6 +544,31 @@ footer {
 </section>
 <!-- FINAL SURPRISE -->
 <section class="final">
+    <div class="cake">
+
+    <div class="candles">
+        <div class="candle"><div class="flame"></div></div>
+        <div class="candle"><div class="flame"></div></div>
+        <div class="candle"><div class="flame"></div></div>
+        <div class="candle"><div class="flame"></div></div>
+        <div class="candle"><div class="flame"></div></div>
+    </div>
+
+    <div class="cake-top">
+        <span>❤️</span>
+        <span>❤️</span>
+        <span>❤️</span>
+    </div>
+
+    <div class="cake-body">
+        <div class="cake-cream"></div>
+        <div class="cake-cream"></div>
+        <div class="cake-cream"></div>
+    </div>
+
+    <div class="cake-plate"></div>
+
+</div>
     <h2>Happy Birthday ❤️</h2>
     <p>
         You're my girlfriend, my best friend,
