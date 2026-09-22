@@ -725,11 +725,15 @@ function toggleMusic() {
     }
 }
 /* Final surprise */
+/* Final surprise ❤️🌻 */
 function showSurprise() {
     document.getElementById("surprise").style.display = "block";
+
+    // Hearts ❤️
     for (let i = 0; i < 50; i++) {
         setTimeout(() => {
             const heart = document.createElement("div");
+
             heart.innerHTML = "❤️";
             heart.style.position = "fixed";
             heart.style.left = Math.random() * 100 + "vw";
@@ -737,7 +741,9 @@ function showSurprise() {
             heart.style.fontSize =
                 (20 + Math.random() * 30) + "px";
             heart.style.zIndex = "999";
+
             document.body.appendChild(heart);
+
             heart.animate(
                 [
                     {
@@ -757,8 +763,17 @@ function showSurprise() {
                     duration: 1500
                 }
             );
+
             setTimeout(() => heart.remove(), 1600);
+
         }, i * 50);
+    }
+
+    // Sunflowers 🌻
+    for (let i = 0; i < 35; i++) {
+        setTimeout(() => {
+            createSunflower();
+        }, i * 180);
     }
 }
 </script>
